@@ -4,10 +4,6 @@ MAINTAINER Jean-Baptiste BARTH <jeanbaptiste.barth@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-#this avoids some weird issues
-#see: https://github.com/dotcloud/docker/issues/2356
-RUN ln -sf /proc/self/fd /dev/fd
-
 #prerequisites
 RUN apt-get update # 2013-06-11
 RUN apt-get install -y procps curl
